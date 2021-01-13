@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int n,a[10000],max=0,count=0,min=10000,r=0;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+        if(a[i]==10000){
+            r++;
+            
+        }
+        if(a[i]>max){
+            max = a[i];
+            count++;
+        }
+        if(a[i]<min){
+            min=a[i];
+            count++;
+        }
+    }
+    count = count-2;
+    if(r==n){
+        cout<<0<<endl;
+    }
+    else if(r==1){
+        cout<<1<<endl;
+    }
+    else{
+        if(count>0){
+            cout<<count<<endl;
+        }else{
+            cout<<0<<endl;
+        }
+    }  
+    return 0;   
+}

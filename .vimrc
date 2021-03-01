@@ -8,6 +8,8 @@ set autoindent
 set smartindent
 set nowrap
 
+map <F9> :!g++ -g % -o %:r && ./%:r <CR>
+
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'

@@ -1,28 +1,17 @@
-#include<bits/stdc++.h>
-using namespace std;
+set nu rnu
+filetype plugin indent on
+syntax on
+set hidden
+set backspace=indent,eol,start
+set noswapfile
+set autoindent
+set smartindent
+set nowrap
 
-int main(){
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    int n,sum=0,x,a,z,count=0;
-    cin>>n;
-    x=n;
-    z=n;
-    while(z!=0){
-        count++;
-        z=z/10;
-    }
-    while(x!=0){
-        a = x%10;
-        a = pow(a,count);
-        sum=sum+a;
-        x=x/10;
-    }
-    if(sum==n){
-        cout<<"YES"<<endl;
-    }
-    else{
-        cout<<"NO"<<endl;
-    }
-    return 0;   
-} 
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'crusoexia/vim-monokai'
+call plug#end()
+
+colorscheme gruvbox
+set background=dark

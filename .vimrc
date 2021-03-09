@@ -8,7 +8,7 @@ set autoindent
 set smartindent
 set nowrap
 
-map <F9> :!g++ -g % -o %:r && ./%:r <CR>
+map <F9> :w <bar> !g++ -g % -o %:r && ./%:r <CR>
 autocmd BufNewFile *.cpp execute "0r ~/.vim/template.cpp"
 if has("autocmd")
   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!

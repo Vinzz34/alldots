@@ -118,6 +118,13 @@ fi
 
 template(){
 cat<<EOF
+/**
+ *   author: Vinzz-34
+EOF
+#printf " *   Created: %d\n" $(date)
+echo " *   Created: $(date +%d).$(date +%m).$(date +%Y) $(date +%I):$(date +%M):$(date +%S)"
+cat<<EOC
+**/
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -145,7 +152,7 @@ int main(){
 	#endif
 	return 0;
 }
-EOF
+EOC
 }
 create(){
 	template > $1.cpp
@@ -166,9 +173,9 @@ del(){
 	fi
 }
 run(){
-	echo [DEBUG MODE] compiling $1.cpp with c++14.
+	echo [DEBUG MODE] compiling $1.cpp with c++17.
 	echo Input:
-	g++ -std=c++14 -O2 -Wall $1.cpp -o $1 && ./$1
+	g++ -std=c++17 -O2 -Wall $1.cpp -o $1 && ./$1
 	
 
 }

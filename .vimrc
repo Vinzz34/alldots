@@ -27,6 +27,7 @@ Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'tomasr/molokai'
 call plug#end()
 
-colorscheme sublimemonokai
+colorscheme monokai
+
 
 

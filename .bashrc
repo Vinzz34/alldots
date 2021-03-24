@@ -157,11 +157,11 @@ EOC
 create(){
 	template > $1.cpp
 	echo creating $1.cpp ...
-	subl $1.cpp
+	nvim $1.cpp
 }
 open(){
 	echo opening $1.cpp ...
-	subl $@.cpp
+	nvim $@.cpp
 }
 del(){
 	echo deleting $1.cpp ...

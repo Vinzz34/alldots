@@ -121,7 +121,6 @@ cat<<EOF
 /**
  *   author: Vinzz34
 EOF
-#printf " *   Created: %d\n" $(date)
 echo " *   Created: $(date +%d).$(date +%m).$(date +%Y) $(date +%I):$(date +%M):$(date +%S)"
 cat<<EOC
 **/
@@ -155,26 +154,38 @@ int main(){
 EOC
 }
 create(){
-	template > $1.cpp
-	echo creating $1.cpp ...
-	nvim $1.cpp
+	a=($@)
+	for i in "${a[@]}"
+	do
+		template > $i.cpp
+		echo creating $i.cpp ...
+		subl $i.cpp
+	done
 }
 open(){
-	echo opening $1.cpp ...
-	nvim $@.cpp
+	a=($@)
+	for i in "${a[@]}"
+	do
+		echo opening $i.cpp ...
+		subl $i.cpp
+	done
 }
 del(){
-	echo deleting $1.cpp ...
-	if test -f "$1.cpp"; then
-  	  rm $1.cpp
-	fi
-	if test -f "$1"; then
-  	  rm $1
-	fi
+	a=($@)
+	for i in "${a[@]}"
+	do
+		echo deleting $i.cpp ...
+		if test -f "$i.cpp"; then
+		  rm $i.cpp
+		fi
+		if test -f "$i"; then
+		  rm $i
+		fi
+	done
 }
 run(){
 	echo [DEBUG MODE] compiling $1.cpp with c++17.
-	g++ -std=c++17 -O2 -Wall $1.cpp -o $1
+	g++ -std=c++17 -O2 -Wall -Wno-unused-variable $1.cpp -o $1
 	echo Input:
 	./$1
 }

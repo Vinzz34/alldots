@@ -191,6 +191,7 @@ run(){
 }
 
 rng(){
+	echo Genarating ...
 	echo $1
 	for (( i=1; i<=$1; i++ ))
 	do
@@ -199,4 +200,16 @@ rng(){
 	printf "\n"
 }
 
+mkcdir(){
+	echo making directory $1 ....
+	mkdir $1
+	cd $1
+}
+
+round(){
+	mkcdir $1
+	create $1a
+	create $1b
+	create $1c
+}
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\D{[%I:%M:%S %p]}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '

@@ -1,6 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# ~/.bashrc: executed by bash(1) for non-login shells.  # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) for examples
 
 # If not running interactively, don't do anything
 case $- in
@@ -146,9 +144,6 @@ using namespace std;
 int main(){
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	#ifdef VINZZ
-	    cerr<<"Time: "<<1.0*clock()/CLOCKS_PER_SEC<<"s.\n";
-	#endif
 	return 0;
 }
 EOC
@@ -211,5 +206,27 @@ round(){
 	create $1a
 	create $1b
 	create $1c
+}
+cfsamplegen(){
+	#python3 /home/vinzz/github/CodeforcesSampleGenerator/main.py $1
+	python3 /home/vinzz/Documents/main.py $1
+}
+
+runsamples(){
+	echo [DEBUG MODE] compiling $1.cpp with c++17.
+	echo Output:
+	g++ -std=c++17 -O2 -Wall -Wno-unused-variable $1.cpp -o $1
+	./$1 < $1.in > $1-1.out
+	cat $1-1.out
+	echo Expected:
+	cat $1.out
+	echo ------------
+	GREEN='\033[1;32m'
+	RED='\033[0;31m'
+	if cmp -s "$1-1.out" "$1.out"; then
+	    printf "${GREEN}Passed!\n"
+	else
+	    printf "${RED}Failed!\n"
+	fi
 }
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\D{[%I:%M:%S %p]}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '

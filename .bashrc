@@ -208,8 +208,7 @@ round(){
 	create $1c
 }
 cfsamplegen(){
-	#python3 /home/vinzz/github/CodeforcesSampleGenerator/main.py $1
-	python3 /home/vinzz/Documents/main.py $1
+	python3 /home/vinzz/github/CFSampleGenerator/main.py $1
 }
 
 runsamples(){

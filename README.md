@@ -1,1 +1,1 @@
-All rc files used by Vinzz.
+All dotfiles files used by Vinzz.

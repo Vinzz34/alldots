@@ -1,4 +1,5 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.  # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) for examples
+# ~/.bashrc: executed by bash(1) for non-login shells.  see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
 # If not running interactively, don't do anything
 case $- in
@@ -112,7 +113,7 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi 
+fi
 
 template(){
 cat<<EOF
@@ -201,12 +202,6 @@ mkcdir(){
 	cd $1
 }
 
-round(){
-	mkcdir $1
-	create $1a
-	create $1b
-	create $1c
-}
 cfsamplegen(){
 	python3 /home/vinzz/github/CFSampleGenerator/main.py $1
 }

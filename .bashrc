@@ -233,4 +233,4 @@ alias spicetify=/home/vinzz/spicetify-cli/spicetify
 . "$HOME/.cargo/env"
 
 eval "$(starship init bash)"
-
+colorscript random

@@ -7,6 +7,7 @@ set noswapfile
 set autoindent
 set smartindent
 set nowrap
+set noshowmode
 
 if has("autocmd")
   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
@@ -25,6 +26,9 @@ Plug 'crusoexia/vim-monokai'
 Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'tomasr/molokai'
 Plug 'Mofiqul/dracula.nvim'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
-
+let g:lightline = {
+      \ 'colorscheme': 'darcula',
+      \ }

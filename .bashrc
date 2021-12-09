@@ -115,6 +115,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#begin
+
 template(){
 cat<<EOF
 /**
@@ -155,7 +157,7 @@ create(){
 	do
 		template > $i.cpp
 		echo creating $i.cpp ...
-		subl $i.cpp
+		nvim $i.cpp
 	done
 }
 open(){
@@ -163,7 +165,7 @@ open(){
 	for i in "${a[@]}"
 	do
 		echo opening $i.cpp ...
-		subl $i.cpp
+		nvim $i.cpp
 	done
 }
 del(){
@@ -223,4 +225,12 @@ runsamples(){
 	    printf "${RED}Failed!\n"
 	fi
 }
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\D{[%I:%M:%S %p]}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\D{[%I:%M:%S %p]}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+alias spicetify=/home/vinzz/spicetify-cli/spicetify
+#end
+. "$HOME/.cargo/env"
+
+eval "$(starship init bash)"
+

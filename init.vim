@@ -24,7 +24,7 @@ Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
 Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'tomasr/molokai'
+Plug 'Mofiqul/dracula.nvim'
 call plug#end()
 
-colorscheme monokai
 

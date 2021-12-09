@@ -25,9 +25,11 @@ Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
 Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'tomasr/molokai'
+Plug 'dracula/vim'
 call plug#end()
 
 colorscheme monokai
+
 
 
 

@@ -234,3 +234,5 @@ alias spicetify=/home/vinzz/spicetify-cli/spicetify
 
 eval "$(starship init bash)"
 colorscript random
+alias v='nvim'
+alias fetch='fm6000 -c cyan -f astronaut.txt'

@@ -1,3 +1,18 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  exec startx
+fi
+
+#C++
 template(){
 cat<<EOF
 /**
@@ -7,9 +22,7 @@ echo " *   Created: $(date +%d).$(date +%m).$(date +%Y) $(date +%I):$(date +%M):
 cat<<EOC
 **/
 #include<bits/stdc++.h>
-
 using namespace std;
-
 #define ll long long
 #define ar array
 #define ld long double
@@ -24,7 +37,6 @@ using namespace std;
 #define MOD 1000000007
 #define EACH(v) for(auto x : v)
 #define VINZZ
-
 int main(){
 	ios::sync_with_stdio(false);
 	cin.tie(0);
@@ -85,9 +97,9 @@ mkcdir(){
 	cd $1
 }
 
-cfsamplegen(){
-	python3 /home/vinzz/github/CFSampleGenerator/main.py $1
-}
+#cfsamplegen(){
+#	python3 /home/vinzz/github/CFSampleGenerator/main.py $1
+#}
 
 runsamples(){
 	echo [DEBUG MODE] compiling $1.cpp with c++17.
@@ -107,8 +119,10 @@ runsamples(){
 	fi
 }
 
-alias spicetify=/home/vinzz/spicetify-cli/spicetify
+#Startup
 eval "$(starship init bash)"
-colorscript random
 alias v='nvim'
-alias fetch='fm6000 -c cyan -f astronaut.txt'
+alias r='ranger'
+colorscript random
+
+

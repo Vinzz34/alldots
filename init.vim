@@ -1,13 +1,29 @@
-set nu 
-filetype plugin indent on
+set si
 syntax on
 set hidden
-set backspace=indent,eol,start
 set noswapfile
 set autoindent
-set smartindent
 set nowrap
-set noshowmode
+set hls
+set ts=4
+set sw=4
+
+set nu
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set rnu
+    autocmd BufLeave,FocusLost,InsertEnter * set nornu
+augroup END
+
+autocmd BufNewFile *.cpp 0r /home/vinzz/c++/template.cpp
+
+map <C-a> <esc>ggVG<CR>
+noremap <TAB> %
+inoremap jj <ESC> 
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+inoremap {{ {
+inoremap {} {}
 
 if has("autocmd")
   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
@@ -29,6 +45,5 @@ Plug 'Mofiqul/dracula.nvim'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
-let g:lightline = {
-      \ 'colorscheme': 'darcula',
-      \ }
+colorscheme gruvbox
+

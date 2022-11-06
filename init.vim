@@ -7,6 +7,7 @@ set nowrap
 set hls
 set ts=4
 set sw=4
+set noshowmode
 
 set nu
 augroup numbertoggle
@@ -15,8 +16,7 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter * set nornu
 augroup END
 
-autocmd BufNewFile *.cpp 0r /home/vinzz/c++/template.cpp
-
+autocmd BufNewFile *.cpp 0r ~/github/cp-solutions/template.cpp 
 map <C-a> <esc>ggVG<CR>
 noremap <TAB> %
 inoremap jj <ESC> 
@@ -46,4 +46,6 @@ Plug 'itchyny/lightline.vim'
 call plug#end()
 
 colorscheme gruvbox
-
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }

@@ -12,6 +12,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias v='nvim'
 alias r='ranger'
+alias python='python3'
 
 run(){
 #	echo [DEBUG MODE] compiling $1.cpp with c++17.

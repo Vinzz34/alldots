@@ -45,7 +45,7 @@ Plug 'Mofiqul/dracula.nvim'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme dracula
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }

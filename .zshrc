@@ -12,6 +12,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias v='nvim'
 alias r='ranger'
+alias z='zathura'
 alias python='python3'
 
 run(){

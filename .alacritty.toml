@@ -1,87 +1,192 @@
-[colors.bright]
-black = "#6272a4"
-blue = "#d6acff"
-cyan = "#a4ffff"
-green = "#69ff94"
-magenta = "#ff92df"
-red = "#ff6e6e"
-white = "#ffffff"
-yellow = "#ffffa5"
+# [colors.bright]
+# black = "#6272a4"
+# blue = "#d6acff"
+# cyan = "#a4ffff"
+# green = "#69ff94"
+# magenta = "#ff92df"
+# red = "#ff6e6e"
+# white = "#ffffff"
+# yellow = "#ffffa5"
+#
+# [colors.cursor]
+# cursor = "CellForeground"
+# text = "CellBackground"
+#
+# [colors.footer_bar]
+# background = "#282a36"
+# foreground = "#f8f8f2"
+#
+# [colors.hints.end]
+# background = "#282a36"
+# foreground = "#f1fa8c"
+#
+# [colors.hints.start]
+# background = "#f1fa8c"
+# foreground = "#282a36"
+#
+# [colors.line_indicator]
+# background = "None"
+# foreground = "None"
+#
+# [colors.normal]
+# black = "#21222c"
+# blue = "#bd93f9"
+# cyan = "#8be9fd"
+# green = "#50fa7b"
+# magenta = "#ff79c6"
+# red = "#ff5555"
+# white = "#f8f8f2"
+# yellow = "#f1fa8c"
+#
+# [colors.primary]
+# background = "#282a36"
+# bright_foreground = "#ffffff"
+# foreground = "#f8f8f2"
+#
+# [colors.search.focused_match]
+# background = "#ffb86c"
+# foreground = "#44475a"
+#
+# [colors.search.matches]
+# background = "#50fa7b"
+# foreground = "#44475a"
+#
+# [colors.selection]
+# background = "#44475a"
+# text = "CellForeground"
+#
+# [colors.vi_mode_cursor]
+# cursor = "CellForeground"
+# text = "CellBackground"
 
-[colors.cursor]
-cursor = "CellForeground"
-text = "CellBackground"
+# [colors.primary]
+# background = "0x1e2127"
+# foreground = "0xabb2bf"
+# bright_foreground = "0xe6efff"
+#
+# [colors.normal]
+# black = "0x1e2127"
+# red = "0xe06c75"
+# green = "0x98c379"
+# yellow = "0xd19a66"
+# blue = "0x61afef"
+# magenta = "0xc678dd"
+# cyan = "0x56b6c2"
+# white = "0x828791"
+#
+# [colors.bright]
+# black = "0x5c6370"
+# red = "0xe06c75"
+# green = "0x98c379"
+# yellow = "0xd19a66"
+# blue = "0x61afef"
+# magenta = "0xc678dd"
+# cyan = "0x56b6c2"
+# white = "0xe6efff"
+#
+# [colors.dim]
+# black = "0x1e2127"
+# red = "0xe06c75"
+# green = "0x98c379"
+# yellow = "0xd19a66"
+# blue = "0x61afef"
+# magenta = "0xc678dd"
+# cyan = "0x56b6c2"
+# white = "0x828791"
 
-[colors.footer_bar]
-background = "#282a36"
-foreground = "#f8f8f2"
-
-[colors.hints.end]
-background = "#282a36"
-foreground = "#f1fa8c"
-
-[colors.hints.start]
-background = "#f1fa8c"
-foreground = "#282a36"
-
-[colors.line_indicator]
-background = "None"
-foreground = "None"
-
-[colors.normal]
-black = "#21222c"
-blue = "#bd93f9"
-cyan = "#8be9fd"
-green = "#50fa7b"
-magenta = "#ff79c6"
-red = "#ff5555"
-white = "#f8f8f2"
-yellow = "#f1fa8c"
+# [colors.primary]
+# background = "0x1b1e28"
+# foreground = "0xa6accd"
+#
+# [colors.cursor]
+# text = "CellBackground"
+# cursor = "CellForeground"
+#
+# [colors.search.matches]
+# foreground = "0x1b1e28"
+# background = "0xadd7ff"
+#
+# [colors.search.focused_match]
+# foreground = "0x1b1e28"
+# background = "0xadd7ff"
+#
+# [colors.selection]
+# text = "CellForeground"
+# background = "0x303340"
+#
+# [colors.vi_mode_cursor]
+# text = "CellBackground"
+# cursor = "CellForeground"
+#
+# [colors.normal]
+# black = "0x1b1e28"
+# red = "0xd0679d"
+# green = "0x5de4c7"
+# yellow = "0xfffac2"
+# blue = "0x89ddff"
+# magenta = "0xfcc5e9"
+# cyan = "0xadd7ff"
+# white = "0xffffff"
+#
+# [colors.bright]
+# black = "0xa6accd"
+# red = "0xd0679d"
+# green = "0x5de4c7"
+# yellow = "0xfffac2"
+# blue = "0xadd7ff"
+# magenta = "0xfae4fc"
+# cyan = "0x89ddff"
+# white = "0xffffff"
 
 [colors.primary]
-background = "#282a36"
-bright_foreground = "#ffffff"
-foreground = "#f8f8f2"
+background = "#0A0E14"
+foreground = "#B3B1AD"
 
-[colors.search.focused_match]
-background = "#ffb86c"
-foreground = "#44475a"
+[colors.normal]
+black = "#01060E"
+red = "#EA6C73"
+green = "#91B362"
+yellow = "#F9AF4F"
+blue = "#53BDFA"
+magenta = "#FAE994"
+cyan = "#90E1C6"
+white = "#C7C7C7"
 
-[colors.search.matches]
-background = "#50fa7b"
-foreground = "#44475a"
-
-[colors.selection]
-background = "#44475a"
-text = "CellForeground"
-
-[colors.vi_mode_cursor]
-cursor = "CellForeground"
-text = "CellBackground"
+[colors.bright]
+black = "#686868"
+red = "#F07178"
+green = "#C2D94C"
+yellow = "#FFB454"
+blue = "#59C2FF"
+magenta = "#FFEE99"
+cyan = "#95E6CB"
+white = "#FFFFFF"
 
 [font]
 size = 16.0
 
 [font.bold]
-family = "Hack Nerd Font Mono"
+family = "Hack Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Hack Nerd Font Mono"
+family = "Hack Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Hack Nerd Font Mono"
+family = "Hack Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+family = "Hack Nerd Font"
 style = "Regular"
 
 [window]
 decorations = "buttonless"
 dynamic_title = true
 title = "Alacritty"
+option_as_alt = "Both"
+opacity = 0.85
 
 [window.padding]
 x = 15
